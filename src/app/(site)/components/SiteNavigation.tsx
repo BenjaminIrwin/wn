@@ -46,10 +46,10 @@ const SiteNavigation = () => {
             link={links.SignIn}
           />
 
-          <NavigationMenuItem className={className} link={links.Blog} />
+          {/* <NavigationMenuItem className={className} link={links.Blog} />
           <NavigationMenuItem className={className} link={links.Docs} />
           <NavigationMenuItem className={className} link={links.Pricing} />
-          <NavigationMenuItem className={className} link={links.FAQ} />
+          <NavigationMenuItem className={className} link={links.FAQ} /> */}
         </NavigationMenu>
       </div>
 

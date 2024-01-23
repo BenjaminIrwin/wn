@@ -44,3 +44,7 @@ cypress/screenshots
 
 public/robots.txt
 public/sitemap.xml
+.env.development
+.env.development
+.env.production
+.env.development

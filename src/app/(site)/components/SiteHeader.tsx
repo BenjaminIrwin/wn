@@ -63,12 +63,12 @@ function AuthButtons() {
         <span>Sign In</span>
       </Button>
 
-      <Button round href={configuration.paths.signUp}>
+      {/* <Button round href={configuration.paths.signUp}>
         <span className={'flex items-center space-x-2'}>
           <span>Sign Up</span>
           <ChevronRightIcon className={'h-4'} />
         </span>
-      </Button>
+      </Button> */}
     </div>
   );
 }

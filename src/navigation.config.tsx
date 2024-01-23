@@ -5,7 +5,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 type Divider = {
-  divider: true;
+  divider: false;
 };
 
 type NavigationItemLink = {
@@ -30,34 +30,34 @@ type NavigationConfig = {
 
 const NAVIGATION_CONFIG: NavigationConfig = {
   items: [
-    {
-      label: 'Dashboard',
-      path: '/dashboard',
-      Icon: ({ className }: { className: string }) => {
-        return <Squares2X2Icon className={className} />;
-      },
-      end: true,
-    },
-    {
-      label: 'Settings',
-      collapsible: false,
-      children: [
-        {
-          label: 'Profile',
-          path: '/settings/profile',
-          Icon: ({ className }: { className: string }) => {
-            return <UserIcon className={className} />;
-          },
-        },
-        {
-          label: 'Subscription',
-          path: '/settings/subscription',
-          Icon: ({ className }: { className: string }) => {
-            return <CreditCardIcon className={className} />;
-          },
-        },
-      ],
-    },
+    // {
+    //   label: 'Dashboard',
+    //   path: '/dashboard',
+    //   Icon: ({ className }: { className: string }) => {
+    //     return <Squares2X2Icon className={className} />;
+    //   },
+    //   end: true,
+    // },
+    // {
+    //   label: 'Settings',
+    //   collapsible: false,
+    //   children: [
+    //     {
+    //       label: 'Profile',
+    //       path: '/settings/profile',
+    //       Icon: ({ className }: { className: string }) => {
+    //         return <UserIcon className={className} />;
+    //       },
+    //     },
+    //     {
+    //       label: 'Subscription',
+    //       path: '/settings/subscription',
+    //       Icon: ({ className }: { className: string }) => {
+    //         return <CreditCardIcon className={className} />;
+    //       },
+    //     },
+    //   ],
+    // },
   ],
 };
 

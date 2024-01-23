@@ -10,7 +10,7 @@
     --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
-    --primary: 258.3 89.5% 66.3%;
+    --primary: 218 57% 49%;
     --primary-foreground: 210 20% 98%;
     --secondary: 220 14.3% 95.9%;
     --secondary-foreground: 220.9 39.3% 11%;
@@ -22,7 +22,7 @@
     --destructive-foreground: 210 20% 98%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 262.1 83.3% 57.8%;
+    --ring: 218 57% 49%;
     --radius: 0.5rem;
     --container-padding: 1.25rem;
   }
@@ -49,6 +49,124 @@
     --ring: 263.4 70% 50.4%;
   }
 }
+
+.floating {
+  animation-name: floating;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 5px
+}
+
+.floating,.floating2 {
+  animation-duration: 3s;
+  margin-left: 30px
+}
+
+.floating2 {
+  animation-name: floating2;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 8px
+}
+
+.floating3 {
+  animation-name: floating3;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 2px
+}
+
+.floating3,.floating4 {
+  animation-duration: 3s;
+  margin-left: 30px
+}
+
+.floating4 {
+  animation-name: floating4;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 6px
+}
+
+.floating5 {
+  animation-name: floating5;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 4px
+}
+
+@keyframes floating {
+  0% {
+      transform: translate(0)
+  }
+
+  50% {
+      transform: translateY(7px)
+  }
+
+  to {
+      transform: translate(0)
+  }
+}
+
+@keyframes floating2 {
+  0% {
+      transform: translate(0)
+  }
+
+  50% {
+      transform: translateY(-8px)
+  }
+
+  to {
+      transform: translate(0)
+  }
+}
+
+@keyframes floating3 {
+  0% {
+      transform: translate(0)
+  }
+
+  50% {
+      transform: translateY(8px)
+  }
+
+  to {
+      transform: translate(0)
+  }
+}
+
+@keyframes floating4 {
+  0% {
+      transform: translate(0)
+  }
+
+  50% {
+      transform: translateY(-5px)
+  }
+
+  to {
+      transform: translate(0)
+  }
+}
+
+@keyframes floating5 {
+  0% {
+      transform: translate(0)
+  }
+
+  50% {
+      transform: translateY(6px)
+  }
+
+  to {
+      transform: translate(0)
+  }
+}
+
 
 @layer base {
   * {

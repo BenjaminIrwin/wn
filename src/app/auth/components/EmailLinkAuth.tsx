@@ -10,6 +10,7 @@ import If from '~/core/ui/If';
 import Alert from '~/core/ui/Alert';
 import useSignInWithOtp from '~/core/hooks/use-sign-in-with-otp';
 import configuration from '~/configuration';
+import ChevronRightIcon from '@heroicons/react/24/outline/ChevronRightIcon';
 
 const EmailLinkAuth: React.FC = () => {
   const signInWithOtpMutation = useSignInWithOtp();
@@ -52,29 +53,42 @@ const EmailLinkAuth: React.FC = () => {
 
   return (
     <form className={'w-full'} onSubmit={onSubmit}>
-      <div className={'flex flex-col space-y-4'}>
-        <TextField>
-          <TextField.Label>
-            Email
-            <TextField.Input
-              data-cy={'email-input'}
-              required
-              type="email"
-              placeholder={'your@email.com'}
-              name={'email'}
-            />
-          </TextField.Label>
-        </TextField>
+<div className={'flex flex-col sm:flex-row justify-center space-x-4 items-center'}>
+  <TextField className={'w-5/6 md:7/12'} >
+      <TextField.Input
+        className={'text-base leading-6 h-12'}
+        data-cy={'email-input'}
+        required
+        type="email"
+        placeholder={'your@email.com'}
+        name={'email'}
+      />
+  </TextField>
 
-        <Button loading={signInWithOtpMutation.isMutating}>
-          <If
-            condition={signInWithOtpMutation.isMutating}
-            fallback={`Send email link`}
-          >
-            Sending email link...
-          </If>
-        </Button>
-      </div>
+  <Button round variant={'custom'} loading={signInWithOtpMutation.isMutating} 
+  className={
+        'w-5/6 md:w-5/12 mt-3 md:mt-0 h-12 bg-transparent bg-gradient-to-r shadow-2xl' +
+        ' hover:shadow-primary/60 from-primary' +
+        ' to-primary-600 text-white'
+      }
+      >
+    <If
+      condition={signInWithOtpMutation.isMutating}
+      fallback={<span className={'flex items-center space-x-2'}>
+      <span>Get Started</span>
+      <ChevronRightIcon
+        className={
+          'h-4 animate-in fade-in slide-in-from-left-8' +
+          ' delay-1000 fill-mode-both duration-1000 zoom-in'
+        }
+      />
+    </span>}
+    >
+      Sending email link...
+    </If>
+  </Button>
+</div>
+
 
       <If condition={signInWithOtpMutation.error}>
         <Alert type={'error'}>

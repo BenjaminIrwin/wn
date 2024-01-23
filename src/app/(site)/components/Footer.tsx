@@ -99,7 +99,7 @@ function Footer() {
               </div>
             </div>
 
-            <NewsletterSignup />
+            {/* <NewsletterSignup /> */}
           </div>
         </div>
       </Container>

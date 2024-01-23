@@ -28,11 +28,11 @@ const configuration = {
     // NB: Enable the providers below in the Supabase Console
     // in your production project
     providers: {
-      emailPassword: true,
+      emailPassword: false,
       phoneNumber: false,
-      emailLink: false,
+      emailLink: true,
       emailOtp: false,
-      oAuth: ['google'] as Provider[],
+      oAuth: [],
     },
   },
   production,
